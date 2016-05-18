@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= projectName %></title>
+    <link rel="stylesheet" href="../sass/index.scss">
+</head>
+<body>
+    <div class="container"></div>
+    <script type="text/javascript" src="../js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="../js/<%= componentName %>.js"></script>
+    <script type="text/javascript">
+        $(".contaier").<%= componentName %>({
+            //add the plugin options here
+        });
+    </script>
+</body>
+</html>

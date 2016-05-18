@@ -1,0 +1,18 @@
+{
+  "name": "generator-gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "huangxiaoyan",
+  "license": "ISC",
+  "dependencies": {
+    "del": "^2.2.0",
+    "yeoman-generator": "^0.23.3"
+  }
+}

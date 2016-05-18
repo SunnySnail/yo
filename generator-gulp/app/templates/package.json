@@ -1,0 +1,19 @@
+{
+  "name": "templates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "huangxiaoyan",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.1"
+  },
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp"
+  }
+}
