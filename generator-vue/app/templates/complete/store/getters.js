@@ -1,0 +1,1 @@
+export const temp = state => state.example.temp;

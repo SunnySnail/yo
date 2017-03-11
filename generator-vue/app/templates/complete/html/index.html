@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="wap-font-scale" content="no">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <title>name</title>
+</head>
+<script>
+    function fixFontSize() {
+    document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth * (20 / 375) + 'px';
+    }
+    document.addEventListener('DOMContentLoaded', function(e){
+        fixFontSize();
+    }, false)
+</script>
+<body>
+    <div id="app">
+        <router-view></router-view>
+    </div>
+</body>
+</html>
+
