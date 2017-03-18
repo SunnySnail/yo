@@ -6,7 +6,7 @@ var generators = require('yeoman-generator'),
     fs = require('fs'),
     path = require('path'),
     del = require('del'),
-    generatorName = 'gulp';
+    generatorName = 'vue';
 
 module.exports = generators.Base.extend({
     constructor: function(){
