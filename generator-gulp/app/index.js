@@ -35,6 +35,9 @@ module.exports = generators.Base.extend({
                     },{
                         name: 'JQ模板',
                         value: 'JQcomponent'
+                    },{
+                        name: 'require模板',
+                        value: 'requireTpl'
                     }
                 ]
             },
@@ -74,8 +77,24 @@ module.exports = generators.Base.extend({
         this.projectOutput = './dist';
         //拷贝文件
         this.directory(this.projectAssets,'src');
-        this.copy('gulpfile.js', 'gulpfile.js');
         this.copy('package.json', 'package.json');
+
+        if(generatorName == 'requireTpl') {
+            var source = fs.createReadStream('src/gulpfile.js');
+            var desti = fs.createWriteStream('gulpfile.js');
+            source.pipe(desti);
+
+            source.on('end',function() {
+                fs.unlink('src/gulpfile.js', function(err) {
+                    if(err) throw err;
+                });
+                del(['src/gulpfile.js']);
+            });
+
+        }else {
+            this.copy('gulpfile.js', 'gulpfile.js');
+        }
+
         //模板
         this.fs.copyTpl(
             this.templatePath(this.projectAssets+'/js/index.js'),

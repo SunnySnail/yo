@@ -1,6 +1,6 @@
 {
-  "name": "modepage",
-  "description": "vue for modepage",
+  "name": "vue",
+  "description": "",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --config webpack.config.dev.js",

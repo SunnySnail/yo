@@ -1,0 +1,61 @@
+@import './layout.scss';
+@import './_common.scss';
+
+.container {
+    text-align: center;
+    header {
+        text-align: center;
+    }
+
+    .main-desc {
+        color: $red;
+        font-size: px2rem(35);
+        font-weight: bold;
+        margin: px2rem(20) auto px2rem(10);
+    }
+
+    .sub-desc {
+        font-weight: bold;
+        font-size: px2rem(20);
+        color: $fontBlack;
+
+        span {
+            font-size: px2rem(25);
+            color: $red;
+            margin: 0 px2rem(5);
+        }
+    }
+
+    .mammon {
+        margin: 0 auto;
+        background: $bgGrey url(../images/caishen.png) no-repeat center center;
+        background-size: 100% auto;
+        width: px2rem(300);
+        height: px2rem(350);
+    }
+
+    .btn {
+        display: block;
+        text-align: center;
+        background-color: $red2;
+        color: $white;
+        width: px2rem(200);
+        margin: 0 auto px2rem(20);
+        border-radius: 10px;
+        height: px2rem(50);
+        line-height: px2rem(50);
+        font-size: px2rem(18);
+        font-weight: bold;
+
+        &:active {
+            background-color: $red3;
+        }
+    }
+
+    .rule {
+        color: $fontGrey4;
+        text-decoration: underline;
+        font-size: px2rem(12);
+    }
+
+}
