@@ -78,19 +78,9 @@ module.exports = generators.Base.extend({
         //拷贝文件
         this.directory(this.projectAssets,'src');
         this.copy('package.json', 'package.json');
-
-        if(generatorName == 'requireTpl') {
-            var source = fs.createReadStream('src/gulpfile.js');
-            var desti = fs.createWriteStream('gulpfile.js');
-            source.pipe(desti);
-
-            source.on('end',function() {
-                fs.unlink('src/gulpfile.js', function(err) {
-                    if(err) throw err;
-                });
-                del(['src/gulpfile.js']);
-            });
-
+        console.log(this.projectAssets);
+        if(this.projectAssets == 'requireTpl') {
+            this.copy(this.projectAssets+'/gulpfile.js', 'gulpfile.js');
         }else {
             this.copy('gulpfile.js', 'gulpfile.js');
         }
@@ -105,6 +95,9 @@ module.exports = generators.Base.extend({
         );
     },
     end: function(){
+        if(this.projectAssets == 'requireTpl') {
+            del(['src/gulpfile.js']);
+        }
         del(['src/**/.gitignore','src/**/.npmignore','src/js/index.js']);
         var dirs = glob.sync('+(node_modules)');
         if(!_.includes(dirs, 'node_modules')){
