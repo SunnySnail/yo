@@ -1,5 +1,5 @@
 {
-  "name": "yo-webpack",
+  "name": "webpack",
   "version": "0.1.0",
   "description": "",
   "repository": {},
@@ -34,6 +34,6 @@
     "webpack-stream": "^3.2.0"
   },
   "scripts": {
-    "dev": "webpack-dev-server --config tasks/webpack.dev.js"
+    "dev": "webpack-dev-server --config webpack.dev.js"
   }
 }
