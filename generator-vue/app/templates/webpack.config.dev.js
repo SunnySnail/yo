@@ -44,8 +44,6 @@ module.exports = {
                 test: /\.(png|jpg|svg)$/,
                 loader: 'url-loader?limit=8192'
             },
-            // { test: /\.(png|jpg)$/, loader: 'file?name=images/[name].[ext]?[hash]'},
-            // { test: /\.(html)$/, loader:'file?name=html/[name].[ext]'},
             {
                 test: /\.vue$/,
                 loader: 'vue'
